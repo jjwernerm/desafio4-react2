@@ -11,3 +11,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* ***** * ***** */
+* {
+  vertical-align: baseline;
+  font-size: 100%;
+  font: inherit;
+  padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* ***** *** ***** */
+/*** C O M P O N E N T S ***/
+/* ***** *** ***** */
+
+/*** Navbar.jsx ***/
+.navbar-flex {
+  justify-content: space-between;
+  display: flex;
+}
+
+/*** Header.jsx ***/
+
+.img-header {
+  background-image: url("/public/imgHeader.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+	min-height: 20vh;	
+}
+
+.colorbg-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+	min-height: 20vh;
+	display: flex;
+  width: 100%;
+}
+
+.h1-header {
+	text-align: center;
+	color: #ffffff;
+}
+
+/* ***** *** ***** */
+/*** V I E W S ***/
+/* ***** *** ***** */
+
+/*** Home.jsx ***/
+
+.catalogue {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  gap: 10px;
+}
+
+li {
+  list-style:none;
+}
+
+.price-card {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.button-flex {
+  justify-content: space-between;
+  display: flex;
+}
+
+.button-card {
+  color: #ffffff !important;
+  margin: .5em;
+  width: 8em;
+}

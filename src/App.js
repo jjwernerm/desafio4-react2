@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState, useEffect } from "react";
+import Context from "./Context";
 
-function App() {
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+
+import Home from "./views/Home";
+
+export default function App() {
+
+  const [pizzasJSON, setPizzasJSON] = useState([]);
+
+  const url = "/pizzas.json";
+
+  const getPizzasJSON = async () => {
+    const get = await fetch(url);
+    const {pizzas} = await get.json();
+    setPizzasJSON(pizzas);
+  }
+
+  useEffect(() => {
+    getPizzasJSON();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Context.Provider value={{pizzasJSON}}>
+        <Navbar />
+        <Header />
+        <br />
+        <Home />
+      </Context.Provider>
+    </>
   );
 }
-
-export default App;
