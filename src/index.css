@@ -26,12 +26,6 @@ code {
 /*** C O M P O N E N T S ***/
 /* ***** *** ***** */
 
-/*** Navbar.jsx ***/
-.navbar-flex {
-  justify-content: space-between;
-  display: flex;
-}
-
 /*** Header.jsx ***/
 
 .img-header {
@@ -62,9 +56,17 @@ code {
 	color: #ffffff;
 }
 
+/*** Navbar.jsx ***/
+.navbar-flex {
+  justify-content: space-between;
+  display: flex;
+}
+
 /* ***** *** ***** */
 /*** V I E W S ***/
 /* ***** *** ***** */
+
+/*** Carrito.jsx ***/
 
 /*** Home.jsx ***/
 
@@ -92,4 +94,23 @@ li {
   color: #ffffff !important;
   margin: .5em;
   width: 8em;
+}
+
+/*** Pizza.jsx ***/
+
+.card-pizza {
+  display: flex;
+}
+
+.card-img-top-1 {
+  height: 100%;
+}
+
+.card-body-1 {
+  width: 35em
+}
+
+.price-btn {
+  justify-content: space-between;
+  display: flex;
 }
