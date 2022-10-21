@@ -47,12 +47,10 @@ export default () => {
                   <Card.Title>
                     <strong>Precio: ${pizzaDetail.price}</strong>
                   </Card.Title>
-                  <div>
-                    <Button
-                      variant="danger">
-                      Añadir{' '}<BsFillCartCheckFill />
-                    </Button>
-                  </div>
+                  <Button
+                    variant="danger">
+                    Añadir{' '}<BsFillCartCheckFill />
+                  </Button>
                 </div>
               </Card.Body>
             </div>

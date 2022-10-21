@@ -8,8 +8,14 @@ import { useNavigate } from "react-router-dom";
 
 export default () => {
 
-  const { pizzasJSON } = useContext(Context);
+  const { pizzasJSON, setPizzasJSON } = useContext(Context);
   const navigate = useNavigate();
+
+    const getCar = (id) => {
+    const pizzaIndex = pizzasJSON.findIndex((p) => p.id === id);
+    pizzasJSON[pizzaIndex].car = !pizzasJSON[pizzaIndex].car;
+    setPizzasJSON([...pizzasJSON]);
+  };
 
     const verPizzaid = (pizzaid) => {
     navigate(`/pizza/${pizzaid}`);
@@ -37,7 +43,8 @@ export default () => {
                 <Card.Title className="price-card"><strong>$ {pizza.price}</strong></Card.Title>
                 <div className="button-flex">
                   <Button className="button-card" variant="info" onClick={() => verPizzaid(pizza.id)}>Ver Más{' '}<GiMagnifyingGlass /></Button>
-                  <Button className="button-card" variant="danger">Añadir{' '}<BsFillCartCheckFill /></Button>
+                  
+                  <Button onClick={() => getCar(pizza.id)} className="button-card" variant="danger">Añadir{' '}<BsFillCartCheckFill /></Button>
                 </div>
               </ListGroup>
             </Card>

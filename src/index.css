@@ -68,6 +68,21 @@ code {
 
 /*** Carrito.jsx ***/
 
+.img-pizza-car {
+  width: 4em;
+  height: 3em;
+}
+
+.bg-gray {
+  background-color: #efefef;
+  padding: 2em;
+}
+
+.bg-white {
+  background-color: #ffffff;
+  padding: 1em;
+}
+
 /*** Home.jsx ***/
 
 .catalogue {
