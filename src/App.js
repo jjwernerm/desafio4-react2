@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Pizza from "./views/Pizza";
 import Carrito from "./views/Carrito";
+import NotFound from "./views/NotFound";
 
 export default function App() {
 
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pizza/:pizzaid" element={<Pizza />} />
             <Route path="/carrito" element={<Carrito />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Context.Provider>
       </BrowserRouter>

@@ -5,6 +5,11 @@ import Context from "../Context";
 export default () => {
 
   const { pizzasJSON } = useContext(Context);
+
+  const sumar = () => {
+    
+    console.log(pizzasJSON);
+  };
   
   return (
     <>
@@ -19,10 +24,10 @@ export default () => {
                 <Row>
                   <Col xs={3}><img className="img-pizza-car" src={pizza.img} alt="" /></Col>
                   <Col xs={4}><h6> {pizza.name} </h6></Col>
-                  <Col xs={2}>$</Col>
+                  <Col xs={2}>${pizza.price}</Col>
                   <Col xs={1}><Button variant="danger">-</Button></Col>
                   <Col xs={1}>1</Col>
-                  <Col xs={1}><Button variant="primary">+</Button></Col>
+                  <Col xs={1}><Button variant="primary" onClick={sumar}>+</Button></Col>
                 </Row>
                 <hr />
               </div>

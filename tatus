@@ -1,0 +1,23 @@
+[33mcommit acf38b795219887c01b520dc23cdf40be9073836[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: jjwernerm <joannywerner@gmail.com>
+Date:   Thu Oct 20 23:21:09 2022 -0300
+
+    Añade pizza al carrito desde el home
+
+[33mcommit a5a8a48cdec25111beb06d78a07634d63c9b9c93[m
+Author: jjwernerm <joannywerner@gmail.com>
+Date:   Wed Oct 19 23:54:40 2022 -0300
+
+    Redireccionamiento a /pizza/:id completado
+
+[33mcommit 9b664d8a12b18fd5ca5cfd4b33e99362ab24ab94[m
+Author: jjwernerm <joannywerner@gmail.com>
+Date:   Tue Oct 18 13:28:38 2022 -0300
+
+    Mi primer commit V1.0
+
+[33mcommit 3abe012d01e1a09d09949e6757365c5468980ad7[m
+Author: jjwernerm <joannywerner@gmail.com>
+Date:   Mon Oct 17 23:18:20 2022 -0300
+
+    Initialize project using Create React App

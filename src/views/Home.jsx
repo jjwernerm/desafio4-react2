@@ -11,9 +11,9 @@ export default () => {
   const { pizzasJSON, setPizzasJSON } = useContext(Context);
   const navigate = useNavigate();
 
-    const getCar = (id) => {
-    const pizzaIndex = pizzasJSON.findIndex((p) => p.id === id);
-    pizzasJSON[pizzaIndex].car = !pizzasJSON[pizzaIndex].car;
+  const addCar = (id) => {
+    const pizzaIndex = pizzasJSON.findIndex((pizza) => pizza.id === id);
+    pizzasJSON[pizzaIndex].car = !pizzasJSON.car;
     setPizzasJSON([...pizzasJSON]);
   };
 
@@ -44,7 +44,7 @@ export default () => {
                 <div className="button-flex">
                   <Button className="button-card" variant="info" onClick={() => verPizzaid(pizza.id)}>Ver Más{' '}<GiMagnifyingGlass /></Button>
                   
-                  <Button onClick={() => getCar(pizza.id)} className="button-card" variant="danger">Añadir{' '}<BsFillCartCheckFill /></Button>
+                  <Button onClick={() => addCar(pizza.id)} className="button-card" variant="danger">Añadir{' '}<BsFillCartCheckFill /></Button>
                 </div>
               </ListGroup>
             </Card>

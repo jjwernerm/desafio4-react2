@@ -11,7 +11,7 @@ export default () => {
         <Container className="navbar-flex">
           <Navbar.Brand>            
             <Link to="/">
-              <GiFullPizza />{' '}Pizzería Mamma Mía!
+              <GiFullPizza />{' '} Pizzería Mamma Mía!
             </Link>
           </Navbar.Brand>
           <Navbar.Brand>

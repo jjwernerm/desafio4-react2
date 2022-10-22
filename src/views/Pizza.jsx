@@ -9,17 +9,23 @@ import Context from "../Context";
 export default () => {
 
   const [pizzaDetail, setPizzaDetail] = useState([]);
-  const { pizzasJSON } = useContext(Context);
+  const { pizzasJSON, setPizzasJSON } = useContext(Context);
   const { pizzaid } = useParams();
 
   const getPizza = () => {
     const result = pizzasJSON.find((pizza) => (pizza.id) === pizzaid);
-    setPizzaDetail(result || {});
+    setPizzaDetail(result || []);
   }
 
   useEffect(() => {
     getPizza();
-  }, [pizzasJSON]);  
+  }, [pizzasJSON]);
+  
+  const addCar = (id) => {
+    const pizzaIndex = pizzasJSON.findIndex((pizza) => pizza.id === id);
+    pizzasJSON[pizzaIndex].car = !pizzasJSON.car;
+    setPizzasJSON([...pizzasJSON]);
+  };
 
   return (
     <>
@@ -38,19 +44,18 @@ export default () => {
                 </Card.Text>
                 <p><strong>Ingredientes:</strong></p>
                 <Card.Text>
-                  <li><FaPizzaSlice />{' '}Ingrediente 1</li>
-                  <li><FaPizzaSlice />{' '}Ingrediente 2</li>
-                  <li><FaPizzaSlice />{' '}Ingrediente 3</li>
-                  <li><FaPizzaSlice />{' '}Ingrediente 4</li>
+                      <li><FaPizzaSlice />{pizzaDetail.ingredients}</li>
                 </Card.Text>
                 <div className="price-btn">
                   <Card.Title>
                     <strong>Precio: ${pizzaDetail.price}</strong>
-                  </Card.Title>
+                  </Card.Title>                  
                   <Button
+                    onClick={() => addCar(pizzaDetail.id)} 
                     variant="danger">
                     Añadir{' '}<BsFillCartCheckFill />
                   </Button>
+                  
                 </div>
               </Card.Body>
             </div>
