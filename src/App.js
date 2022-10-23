@@ -19,7 +19,7 @@ export default function App() {
 
   const getPizzasJSON = async () => {
     const get = await fetch(url);
-    const {pizzas} = await get.json();
+    const pizzas = await get.json();
     setPizzasJSON(pizzas);
   }
 

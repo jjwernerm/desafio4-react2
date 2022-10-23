@@ -40,11 +40,11 @@ export default () => {
                 <Card.Title><strong>{pizzaDetail.name}</strong></Card.Title>
                 <hr />
                 <Card.Text>
-                  <p>{pizzaDetail.desc}</p>
+                  {pizzaDetail.desc}
                 </Card.Text>
                 <p><strong>Ingredientes:</strong></p>
                 <Card.Text>
-                      <li><FaPizzaSlice />{pizzaDetail.ingredients}</li>
+                  <li><FaPizzaSlice />{pizzaDetail.ingredients}</li>
                 </Card.Text>
                 <div className="price-btn">
                   <Card.Title>

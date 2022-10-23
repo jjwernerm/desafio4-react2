@@ -6,11 +6,6 @@ export default () => {
 
   const { pizzasJSON } = useContext(Context);
 
-  const sumar = () => {
-    
-    console.log(pizzasJSON);
-  };
-  
   return (
     <>
       <Container>
@@ -27,7 +22,7 @@ export default () => {
                   <Col xs={2}>${pizza.price}</Col>
                   <Col xs={1}><Button variant="danger">-</Button></Col>
                   <Col xs={1}>1</Col>
-                  <Col xs={1}><Button variant="primary" onClick={sumar}>+</Button></Col>
+                  <Col xs={1}><Button variant="primary">+</Button></Col>
                 </Row>
                 <hr />
               </div>
